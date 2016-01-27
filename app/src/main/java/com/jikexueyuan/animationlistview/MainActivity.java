@@ -1,8 +1,10 @@
 package com.jikexueyuan.animationlistview;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.LayoutAnimationController;
 import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
@@ -20,7 +22,10 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //这个布局不需要，使用android.R.layout.simple_list_item_1 呈现数据
-//        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        /**
+         * 方法一
+          */
 
         //数据适配器
         adapter = new ArrayAdapter<String>(this,
@@ -33,5 +38,15 @@ public class MainActivity extends ListActivity {
         lac = new LayoutAnimationController(sa, 0.5f); //0.5f: 第一个原件显示50%时，开始下一个元件加载
 
         getListView().setLayoutAnimation(lac);//getListView：获取当前列表
+
+        /**
+         * 方法二
+         */
+        findViewById(R.id.btnAnim).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,AnimationListView.class));
+            }
+        });
     }
 }

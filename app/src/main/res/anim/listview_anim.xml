@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--1 缩放动画 scale.xml
+2 布局动画 listview_anim.xml加载scale.xml
+3 布局文件使用布局动画 main.xml 加载 listview_anim.xml
+
+布局缩放动画
+delay 延时
+调用缩放动画scale_0_1
+-->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/scale_0_1"
+    android:delay="0.5"
+    >
+
+</layoutAnimation>

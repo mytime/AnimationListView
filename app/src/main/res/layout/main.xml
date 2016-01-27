@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    1 缩放动画 scale.xml
+    2 布局动画 listview_anim.xml加载scale.xml
+    3 布局文件使用布局动画 main.xml 加载 listview_anim.xml
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--//配置动画android:layoutAnimation="@anim/listview_anim"-->
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/listview_anim"></ListView>
+
+</LinearLayout>
